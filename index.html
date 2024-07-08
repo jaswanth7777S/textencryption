@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryption/Decryption</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>Text Encryption/Decryption</h1>
+        </header>
+        <div class="form-section">
+            <form action="/encrypt" method="post" class="form-card">
+                <h2>Encrypt Text</h2>
+                <label for="message">Enter Text:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Enter your message..."></textarea>
+                <button type="submit" class="btn encrypt-btn">Encrypt</button>
+            </form>
+
+            <form action="/decrypt" method="post" class="form-card">
+                <h2>Decrypt Text</h2>
+                <label for="encrypted_message">Enter Encrypted Text:</label>
+                <textarea id="encrypted_message" name="encrypted_message" rows="5" placeholder="Paste encrypted text..."></textarea>
+                <button type="submit" class="btn decrypt-btn">Decrypt</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
